@@ -3,49 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>tailwind css</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c33d4e8208.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
 </head>
-<body>
+<body class="bg-gray-100">
+<main class="max-w-screen-xl mx-auto px-16 lg:px-28">
   <header>
-    <section>
-        <div>
+    <section class="flex pt-10 mb-20">
             <div>
-                <h1>It's good 
-                    tea time at The Tea House</h1>
-                <p>Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.</p>
-                <button>Explore More</button>
+                <h1 class="text-5xl md:text-7xl mb-5">It's good <br>
+                    tea time at The <br>Tea House <br></h1>
+                <p class="text-gray-500 w-3/4 mb-5">Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.</p>
+                <button class="bg-gradient-to-r from-orange-400 to-red-600 rounded-lg text-white font-bold h-10 w-100 px-2">Explore More <i class="fa-solid fa-arrow-right -rotate-45"></i></button>
             </div>
-            <div>
-                <img src="./images/banner.png" alt="">
-                <div></div>
+            <div class="relative">
+                <div>
+                    <img src="./images/banner.png" alt="">
+                </div>
+                <div class="absolute flex items-center bg-white shadow-lg h-15 rounded-lg md:px-10 lg:py-4 mx-20 top-28 md:top-80 md:left-10 lg:left-2">
+                    <div>
+                        <i class="fa-solid fa-star text-2xl text-amber-500 mx-2"></i>
+                    </div>
+                    <div>
+                        <h1 class="lg:text-2xl font-bold">5.00</h1>
+                        <p class="text-gray-500">Trust Pilot Ratings</p>
+                    </div>
+                </div>
             </div>
-        </div>
     </section>
   </header>
-  <main>
-    <section>
+    <section class="mt-50 py-8 lg:py-24">
         <div>
-
-            <div>
-                <div>
-                    <img src="./images/tea-1.png" alt="">
-                    <h1>Milk Tea</h1>
-                    <p>Creamer could be replaced by fresh milk</p>
+            <div class="text-center">
+                <h1 class="text-3xl font-bold my-3">Our Featured Products</h1>
+                <p class="text-gray-500 w-4/5 mx-auto mb-10">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+            </div>
+            <div class="flex">
+                <div class="bg-gray-200 px-2 py-2 rounded-lg">
+                    <img class="mx-auto mt-2" src="./images/tea-1.png" alt="">
+                    <h1 class="text-center text-xl font-bold my-2">Milk Tea</h1>
+                    <p class="text-center text-gray-500 w-4/5 mx-auto">Creamer could be replaced by fresh milk</p>
                 </div>
-                <div>
-                    <img src="./images/tea-2.png" alt="">
-                    <h1>Black Tea</h1>
-                    <p>Creamer could be replaced by fresh milk</p>
+                <div class="bg-gray-200 px-2 py-2 rounded-lg ml-4">
+                    <img class="mx-auto mt-2" src="./images/tea-2.png" alt="">
+                    <h1 class="text-center text-xl font-bold my-2">Black Tea</h1>
+                    <p class="text-center text-gray-500 w-4/5 mx-auto">Creamer could be replaced by fresh milk</p>
                 </div>
-                <div>
-                    <img src="./images/tea-3.png" alt="">
-                    <h1>Lemon Tea</h1>
-                    <p>Creamer could be replaced by fresh milk</p>
+                <div class="bg-gray-200 px-2 py-2 rounded-lg mx-4">
+                    <img class="mx-auto mt-2" src="./images/tea-3.png" alt="">
+                    <h1 class="text-center text-xl font-bold my-2">Lemon Tea</h1>
+                    <p class="text-center text-gray-500 w-4/5 mx-auto">Creamer could be replaced by fresh milk</p>
                 </div>
-                <div>
-                    <img src="./images/tea-4.png" alt="">
-                    <h1>Green Tea</h1>
-                    <p>Creamer could be replaced by fresh milk</p>
+                <div class="bg-gray-200 px-2 py-2 rounded-lg">
+                    <img class="mx-auto mt-2" src="./images/tea-4.png" alt="">
+                    <h1 class="text-center text-xl font-bold my-2">Green Tea</h1>
+                    <p class="text-center text-gray-500 w-4/5 mx-auto">Creamer could be replaced by fresh milk</p>
                 </div>
             </div>
         </div>
@@ -98,7 +125,7 @@
     <section>
         <h2></h2>
         <p></p>
-        <div>
+        <div class="flex ">
             <div>
                 <img src="./images/news-1.png" alt="">
                 <time datetime="">Feb 05, 2027</time>
@@ -122,7 +149,6 @@
             </div>
         </div>
     </section>
-  </main>
   <footer>
     <div>
         <div>
@@ -130,7 +156,7 @@
             <div><p>Ready to get strated?</p></div>
             <div><button>Get Started</button></div>
         </div>
-        <div>
+        <div class="flex ">
             <div>
                 <h1>Quick Links</h1>
                 <ul>
@@ -195,7 +221,7 @@
             </div>
             <div>
                 <h1>Subscribe to our newsletter</h1>
-                <textarea name="" id="" placeholder="Email address"></textarea>
+                <input placeholder="Email address" type="text">
             </div>
             <div><img src="./images/fb.png" alt=""></div>
             <div><img src="./images/x.png" alt=""></div>
@@ -206,5 +232,6 @@
         </div>
     </div>
   </footer>
+</main>
 </body>
 </html>
